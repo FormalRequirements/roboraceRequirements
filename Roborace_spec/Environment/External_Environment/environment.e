@@ -12,6 +12,9 @@ deferred class
 	ENVIRONMENT
 
 feature
+	map: MAP
+		--2D MAP of racetrack
+
 	obstacles: BAG[OBSTACLE]
 		--Set of detected obstacles on racetrack
 
