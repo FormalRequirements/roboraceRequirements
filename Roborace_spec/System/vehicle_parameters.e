@@ -1,5 +1,5 @@
 note
-	description: "Vehicle parameters required for calculations"
+	description: "Permanent vehicle parameters required for calculations"
 	author: "Maria Naumcheva"
 	date: "$02/06/2021$"
 	revision: "$02/06/2021$"

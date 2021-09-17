@@ -35,5 +35,9 @@ feature
 			--The distance between the car bounding box and obstacle is under the limit
 		end
 
+	is_inbound (a,b : LOCATION): BOOLEAN
+		deferred
+		ensure Result = (x > a.x and x < b.x and y > a.y and y < b.y)
+		end
 end
 

@@ -9,11 +9,17 @@ deferred class
 
 feature
 
-	track_borders: SEQUENCE [TUPLE [LOCATION, LOCATION]]
+--	track_borders: SEQUENCE [TUPLE [LOCATION, LOCATION]]
 			-- Coordinates of the bounding lines of racetrack
 
-	starting_line: TUPLE [LOCATION, LOCATION]
+--	starting_line: TUPLE [LOCATION, LOCATION]
 			-- Coordinates of the endpoints of the starting line
+
+	set_of_objects: COLLECTION[MAPPED_OBJECT]
+
+	max_xy: LOCATION
+
+	min_xy: LOCATION
 
 	output
 			-- Output the map on a screen
@@ -22,5 +28,13 @@ feature
 		ensure
 			(old Current).is_deep_equal(Current)
 		end
+
+	zoom
+			-- Display a part of a map on a screen
+		deferred
+		end
+
+invariant
+	-- All points are within the coordinate limits
 
 end

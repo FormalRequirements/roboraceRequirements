@@ -50,6 +50,7 @@ feature
 			from
 			invariant
 				loop_invariant
+				not car.obstacle_is_detected
 			until
 				car.race_is_finished
 			loop

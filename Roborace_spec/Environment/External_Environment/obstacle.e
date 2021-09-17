@@ -7,6 +7,9 @@ note
 deferred class
 	OBSTACLE
 
+inherit
+	MAPPED_OBJECT
+	
 feature
 	type: STRING
 		-- Obstacle type

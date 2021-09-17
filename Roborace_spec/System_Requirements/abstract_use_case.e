@@ -21,16 +21,18 @@ feature
 		deferred
 		end
 
-	primary_actor: PRIMARY_ACTOR
-
-
-feature {PRIMARY_ACTOR}
+	trigger: BOOLEAN
+		deferred
+		end
+		
+feature
 
 	main_flow
 		note
 			Callers: racecar_operator
 		require
 			precondition
+			trigger
 		deferred
 		ensure
 			postcondition

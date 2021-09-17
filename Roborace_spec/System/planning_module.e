@@ -32,11 +32,13 @@ feature
 
 		end
 
-	calculate_raceline	--Used to be calculate_global_path
+	calculate_raceline --Used to be calculate_global_path
 		-- Calculate global path from current location to given point
 		-- Input: Road map, Raceline, Parameters, Optimization strategy
 		-- Output: Path, Velocity profile
 		deferred
+		ensure
+			--across  raceline as rl all rl.item.at (2) < car.max_speed end
 		end
 
 	recalculate_global_plan
@@ -69,5 +71,5 @@ feature
 		ensure
 			car.max_speed = v
 		end
-		
+
 end
