@@ -1,13 +1,10 @@
 note
-	description: "Summary description for {POINT_CLOUD}."
+	description: "Summary description for {THROTTLE}."
 	author: ""
 	date: "$Date$"
 	revision: "$Revision$"
 
 deferred class
-	POINT_CLOUD
-
-feature
-
+	THROTTLE
 
 end
