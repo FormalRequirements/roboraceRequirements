@@ -20,7 +20,9 @@ The module shall provide object tracking and path prediction
 
 ==== S.2.2 Mapping and localization module
 
-The system shall perform road segmentation: detect drivable space, road defects 
+The module shall perform fusion of the sensors' data
+
+The module shall perform road segmentation: detect drivable space, road defects 
 
 ==== S.2.3 Planning module
 
@@ -46,9 +48,9 @@ The module shall generate steering, throttle and brake control commands
 
 === S.3 Provided interfaces
 
-* Data input from the sensors
+==== Interface with Roborace system
 
-* Race control unit
+* The system shall receive messages from the Race control unit
 ** obstacles location
 ** start command
 ** stop command
@@ -58,7 +60,29 @@ The module shall generate steering, throttle and brake control commands
 ** emergency stop request
 ** speed limit
 
-* Safety module
+==== Interface with the Speedgoat ECU
+
+* The system shall send messags to the Spedgoat ECU with the frequency ** Hz
+** Speed in m/s
+** Steering angle in rad
+
+==== Interface with the Safety module
+
+* The system shall be able to receive commands from the safety system
+
+==== Interface with the Lidars
+
+* The system shall receive location pointcloud from its lidars with the frequency ** Hz
+
+==== Interface with the IMU sensor
+
+* 
+
+==== Interface with the GNSS-RTK sensor
+
+*
+
+==== Interface with the 
 
 === S.4 Example scenarios
 
